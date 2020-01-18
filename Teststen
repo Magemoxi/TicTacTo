@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Teststen
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Tictacto5 m = new Tictacto5();
+            m.Hauptmenü();
+
+        }
+      
+    }// end class programm
+}// end namespase Testen

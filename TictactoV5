@@ -83,22 +83,24 @@ namespace Teststen
                             break;
                         case 0:
                             Console.Clear();
-                            Reset();
+                            if (input == 00)    // geht nicht, egal wie viele nullen es wird nur eine in input geschrieben
+                                Environment.Exit(0);
+                            else
+                                Reset();
+                            Console.WriteLine("input ist:  >>" + input + "<<");
+                            Console.ReadLine();
                             //ZurückZumHauptmenü();
                             break;
                         default:                // Wenn Zahlen < 0 oder > 4
                             Console.Clear();
-                            if (input == 00)
-                                Environment.Exit(0);
-                            else
-                                Console.WriteLine($"Nur Zahlen von 0 bis 4! Deine Eingabe war: {input}");
+                            Console.WriteLine($"Nur Zahlen von 0 bis 4! Deine Eingabe war: {input}");
                             break;
                     }//end switch                 
                 }//end try
                 catch (Exception)               // Falls Eingabe anderes als Zahlen
                 {
                     Console.Clear();
-                    Console.WriteLine("Das war keine Zahl -.- ");
+                    Console.WriteLine("Das war keine Zahl -.- ");   // muss noch unterscheiden zwischen string und einem zu großen int
                 } // end catch
             } //end while schleife
         }// end methode  Hauptmenü

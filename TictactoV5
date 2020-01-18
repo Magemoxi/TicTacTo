@@ -83,13 +83,11 @@ namespace Teststen
                             break;
                         case 0:
                             Console.Clear();
-                            if (input == 00)    // geht nicht, egal wie viele nullen es wird nur eine in input geschrieben
+                       /*     if (input == 00)    // geht nicht, egal wie viele nullen es wird nur eine in input geschrieben
                                 Environment.Exit(0);
                             else
-                                Reset();
-                            Console.WriteLine("input ist:  >>" + input + "<<");
-                            Console.ReadLine();
-                            //ZurückZumHauptmenü();
+                        */
+                            Reset();
                             break;
                         default:                // Wenn Zahlen < 0 oder > 4
                             Console.Clear();

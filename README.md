@@ -15,12 +15,12 @@ V.5 ist spielbar :), jedoch noch nicht gegen den Rechner :(
 
 
 
-to do
+To do
   - Besere Menüführung
   - Methoden in Klassen auslagern
   - Funktionierenden Bot Modus (Leicht und Normal)
   
-bekannte BUgs in V.5  
+Bekannte Bugs in V.5  
   - Wird der Wertebereich eines Integers überschritten wird diese nicht als Zahl wargenommen und der Catch Block greift.
   - Zurück ins Hauptmenü durch Eingabe 00 geht nicht. Der Integer Input schneidet bei mehr als einer Null die restlichen ab...
   - Durch nur drücken der Enter Taste im Spiel fliegt Ihr ins Hauptmenü. Entweder den gewählten Spielmodus 1 oder 2 auswählen

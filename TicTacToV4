@@ -31,8 +31,8 @@ namespace Teststen
             Console.Clear();
             while (true)
             {
-                Console.WriteLine("\n##### #######################");
-                Console.WriteLine("###  Tic Tac To 4                       ###");
+                Console.WriteLine("\n#########################################");
+                Console.WriteLine("###  Tic Tac To V.4                     ###");
                 Console.WriteLine("###  1) Spieler 1 gebinnt mit x         ###");
                 Console.WriteLine("###  2) Spieler 1 gebinnt mit o         ###");
                 Console.WriteLine("###  3) Ich vs. Rechner || (Anfänger)   ###");

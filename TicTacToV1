@@ -1,0 +1,272 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Teststen
+{
+    class TictactoV1
+    {
+        private bool erneuterSchleifendurchlauf = true;   // Zum Beenden des Programms
+        private int a1, a2, a3, b1, b2, b3, c1, c2, c3;   // Für's ergebnis 0 / 1 / 2
+        private string a11, a22, a33, b11, b22, b33, c11, c22, c33; // Für die Ausgabe X / O
+
+        private int Spieler = 0;
+        //###################################################
+        public TictactoV1()
+        {
+            a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
+            a11 = a22 = a33 = b11 = b22 = b33 = c11 = c22 = c33 = "?";
+        }// end Tictacto
+
+        //###################################################
+        public void Aufrufen()
+        {
+            Console.WriteLine("Tic Tac To :-) \n");
+
+            if (erneuterSchleifendurchlauf == true)
+            {
+                Hauptmenü();
+            }
+        }// end Aufrufen
+
+        //###################################################
+        public void Hauptmenü()
+        {
+            Console.Clear();
+
+            while (erneuterSchleifendurchlauf == true)
+            {
+                Console.WriteLine("\n##################################");
+                Console.WriteLine("###  Tic Tac To V.1              ###");
+                Console.WriteLine("###  1) Spieler 1 gebinnt        ###");
+                Console.WriteLine("###  2) Spieler 2 beginnt        ###");
+                Console.WriteLine("###  3) Neuses Spiel             ###");
+                Console.WriteLine("###  4) Zurück zum Hauptmenü     ###");
+                Console.WriteLine("###  5) Clear                    ###");
+                Console.WriteLine("###  0) Beenden                  ###");
+                Console.WriteLine("####################################");
+                Console.WriteLine("\n Warte auf Eingabe...");
+
+                try
+                {   // Wandelt die Eingabe von einem String in einem int wegen switch um.
+                    string input1 = Console.ReadLine();
+                    int input2 = int.Parse(input1);
+                    //  Console.WriteLine("Eingabe input 1: {0}  und input 2: {1} " ,input1, input2);     // Testen warum input 1 & 2 nicht sausgegeben werden
+                    switch (input2)
+                    {
+                        case 1:
+                            Console.Clear();
+                            Spieler1();
+                            break;
+                        case 2:
+                            Console.Clear();
+                            Spieler2();
+                            break;
+                        case 3:
+                            Console.Clear();
+                            NeuesSpiel();
+                            break;
+                        case 4:
+                            Console.Clear();
+                            Console.WriteLine("Zurück zum Hauptmenü");
+                            erneuterSchleifendurchlauf = false;
+                            break;
+                        case 5:
+                            Console.Clear();
+                            break;
+                        case 0:
+                            Environment.Exit(0);
+                            break;
+                        default:                // Wenn Zahlen < 0 oder > 4
+                            Console.Clear();
+                            Console.WriteLine(input1);
+                            Console.WriteLine("Deine Eingabe war: {0} \n\t Nur Zahlen von 0 bis 5 ! \n", input1);
+                            break;
+                    }//end switch
+                }//end try
+
+                catch (Exception)               // Falls Eingabe anderes als Zahlen
+                {
+                    Console.Clear();
+                    Console.WriteLine("Deine Eingabe war: \n\t Das war keine Zahl -.- \n");
+                } // end catch
+            } //end while schleife
+
+        }// end methode  Hauptmenü
+         //###################################################
+
+        public void Feld()
+        {
+            // int a1, a2, a3, b1, b2, b3, c1, c2, c3;
+            // a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
+
+            Console.Clear();
+            Console.WriteLine("Das Momentane Spielfeld: \n");
+            Console.WriteLine(a11 + " " + a22 + " " + a33);
+            Console.WriteLine(b11 + " " + b22 + " " + b33);
+            Console.WriteLine(c11 + " " + c22 + " " + c33);
+
+            // Prüft welcher Spieler zuletzt dran war und wechselt den Spieler.
+            if (Spieler == 1)
+            {
+                Spieler2();
+            } else if (Spieler == 2)
+            {
+                Spieler1();
+            }
+        }// end Feld
+
+
+        //###################################################
+        public void Spieler1()  // X
+        {
+            Console.Clear();
+
+
+            Console.WriteLine("Spieler 1, setze dein X mit den Zahlen: ");
+            Console.WriteLine("Das Feld entspricht den Tasten");
+            Console.WriteLine("7 8 9 \n4 5 6 \n1 2 3 \n");
+
+            //  int a1, a2, a3, b1, b2, b3, c1, c2, c3;
+            //  a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
+
+            Console.WriteLine(a11 + " " + a22 + " " + a33);
+            Console.WriteLine(b11 + " " + b22 + " " + b33);
+            Console.WriteLine(c11 + " " + c22 + " " + c33);
+
+            string input1 = Console.ReadLine();
+            int input2 = int.Parse(input1);
+            /*
+            7 8 9  <->  a1 a2 a3
+            4 5 6  <->  b1 b2 b3
+            1 2 3  <->  c1 c2 c3
+            */
+            switch (input2)
+            {
+                case 1:
+                    c1 = 1;
+                    c11 = "x";
+                    break;
+                case 2:
+                    c2 = 1;
+                    c22 = "x";
+                    break;
+                case 3:
+                    c3 = 1;
+                    c33 = "x";
+                    break;
+                case 4:
+                    b1 = 1;
+                    b11 = "X";
+                    break;
+                case 5:
+                    b2 = 1;
+                    b22 = "X";
+                    break;
+                case 6:
+                    b3 = 1;
+                    b33 = "X";
+                    break;
+                case 7:
+                    a1 = 1;
+                    a11 = "X";
+                    break;
+                case 8:
+                    a2 = 1;
+                    a22 = "X";
+                    break;
+                case 9:
+                    a3 = 1;
+                    a33 = "X";
+                    break;
+            }// end switch
+
+            Spieler = 1;   // sagt der Methode Feld, das Spieler 1 dran war
+            Feld();     
+        }// end Spieler1
+
+        //###################################################
+        public void Spieler2()  // O
+        {
+            Console.Clear();
+
+
+            Console.WriteLine("Spieler 2, setze dein O mit den Zahlen: ");
+            Console.WriteLine("Das Feld entspricht den Tasten");
+            Console.WriteLine("7 8 9 \n4 5 6 \n1 2 3 \n");
+
+            //  int a1, a2, a3, b1, b2, b3, c1, c2, c3;
+            //  a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
+
+            Console.WriteLine(a11 + " " + a22 + " " + a33);
+            Console.WriteLine(b11 + " " + b22 + " " + b33);
+            Console.WriteLine(c11 + " " + c22 + " " + c33);
+
+            string input1 = Console.ReadLine();
+            int input2 = int.Parse(input1);
+            /*
+            7 8 9  <->  a1 a2 a3
+            4 5 6  <->  b1 b2 b3
+            1 2 3  <->  c1 c2 c3
+            */
+            switch (input2)
+            {
+                case 1:
+                    c1 = 2;
+                    c11 = "O";
+                    break;
+                case 2:
+                    c2 = 2;
+                    c22 = "o";
+                    break;
+                case 3:
+                    c3 = 2;
+                    c33 = "o";
+                    break;
+                case 4:
+                    b1 = 2;
+                    b11 = "o";
+                    break;
+                case 5:
+                    b2 = 2;
+                    b22 = "o";
+                    break;
+                case 6:
+                    b3 = 2;
+                    b33 = "o";
+                    break;
+                case 7:
+                    a1 = 2;
+                    a11 = "o";
+                    break;
+                case 8:
+                    a2 = 2;
+                    a22 = "o";
+                    break;
+                case 9:
+                    a3 = 2;
+                    a33 = "o";
+                    break;
+            }// end switch
+
+            Spieler = 2;   // sagt der Methode Feld, das Spieler 1 dran war
+            Feld();
+        }// end Spieler2
+
+        //###################################################
+        public void Zurück()
+        {
+
+        }// end Zurück
+
+        //###################################################
+        public void NeuesSpiel()
+        {
+
+        }// end Spieler2
+
+
+    }// end class Tictacttoo
+}//end namespace Teststen

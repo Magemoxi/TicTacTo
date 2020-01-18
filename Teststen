@@ -6,14 +6,76 @@ using System.Threading.Tasks;
 
 namespace Teststen
 {
-    class Program
+    class Start
     {
         static void Main(string[] args)
         {
-            Tictacto5 m = new Tictacto5();
-            m.Hauptmenü();
+            while (true)
+            {
+                Console.WriteLine("\n#######################");
+                Console.WriteLine("###  Hauptmenü        ###");
+                Console.WriteLine("###  1) Tictacto V.1  ###");
+                Console.WriteLine("###  2) Tictacto V.2  ###");
+                Console.WriteLine("###  3) Tictacto V.3  ###");
+                Console.WriteLine("###  4) Tictacto V.4  ###");
+                Console.WriteLine("###  5) Tictacto V.5  ###");
+                Console.WriteLine("###  0) Beenden :-(   ###");
+                Console.WriteLine("########################");
+                Console.WriteLine("\n Warte auf Eingabe...");
 
-        }
-      
+                try
+                {   // Wandelt die Eingabe von einem String in einem int wegen switch um.
+                    int input = int.Parse(Console.ReadLine());
+                    //  Console.WriteLine("Eingabe input 1: {0}  und input 2: {1} " ,input1, input2);     // Testen warum input 1 & 2 nicht sausgegeben werden
+                    switch (input)
+                    {
+                        case 1:
+                            Console.Clear();
+                            TictactoV1 tttv1 = new TictactoV1();
+                            tttv1.Hauptmenü();
+                            break;
+                        case 2:
+                            Console.Clear();
+                            Console.Clear();
+                            TictactoV2 tttv2 = new TictactoV2();
+                            tttv2.Hauptmenü();
+                            break;
+                        case 3:
+                            Console.Clear();
+                            Console.Clear();
+                            TictactoV3 tttv3 = new TictactoV3();
+                            tttv3.Hauptmenü();
+                            break;
+                        case 4:
+                            Console.Clear();
+                            Console.Clear();
+                            TictactoV4 tttv4 = new TictactoV4();
+                            tttv4.Hauptmenü();
+                            break;
+                        case 5:
+                            Console.Clear();
+                            Console.Clear();
+                            TictactoV5 tttv5 = new TictactoV5();
+                            tttv5.Hauptmenü();
+                            break;
+                        case 0:
+                            Console.Clear();
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.Clear();
+                            Console.WriteLine($"Nur Zahlen von 0 bis 4! Deine Eingabe war: {input}");
+                            break;
+                    }//end switch                 
+                }//end try
+                catch (Exception)               // Falls Eingabe anderes als Zahlen
+                {
+                    Console.Clear();
+                    Console.WriteLine("Das war keine Zahl -.- ");
+                } // end catch
+            } //end while schleife
+
+        }//end main
+
     }// end class programm
 }// end namespase Testen

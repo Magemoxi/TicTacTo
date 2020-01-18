@@ -1,4 +1,12 @@
-class Tictacto4
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Teststen
+{
+    class TictactoV4
     {
         private bool erneuterSchleifendurchlauf = true;     // Zum Beenden des Programms
         private int a1, a2, a3, b1, b2, b3, c1, c2, c3;     // Für's ergebnis 0 / 1 / 2
@@ -7,7 +15,7 @@ class Tictacto4
         private static String spielstart;
 
         //###################################################
-        public Tictacto4()
+        public TictactoV4()
         {
             a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
             a11 = a22 = a33 = b11 = b22 = b33 = c11 = c22 = c33 = "?";
@@ -372,3 +380,4 @@ class Tictacto4
         //###################################################
 
     }// end class Tictacttoo
+}//end namespace Teststen

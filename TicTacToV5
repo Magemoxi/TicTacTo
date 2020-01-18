@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Teststen
 {
-    class Tictacto5
+    class TictactoV5
     {
         private bool erneuterSchleifendurchlauf = true;     // Zum Beenden des Programms
         private int a1, a2, a3, b1, b2, b3, c1, c2, c3;     // Für's ergebnis 0 / 1 / 2
@@ -17,7 +17,7 @@ namespace Teststen
         //###################################################
         //####################################################################
         //###################################################
-        public Tictacto5()
+        public TictactoV5()
         {
             a1 = a2 = a3 = b1 = b2 = b3 = c1 = c2 = c3 = 0;
             a11 = a22 = a33 = b11 = b22 = b33 = c11 = c22 = c33 = "?";
@@ -37,7 +37,7 @@ namespace Teststen
             while (true)
             {
                 Console.WriteLine("\n###########################################");
-                Console.WriteLine("###  Tic Tac To 5                       ###");
+                Console.WriteLine("###  Tic Tac To V.5                     ###");
                 Console.WriteLine("###  1) Spieler 1 gebinnt mit x         ###");
                 Console.WriteLine("###  2) Spieler 1 gebinnt mit o         ###");
                 Console.WriteLine("###  3) Ich vs. Rechner || (Anfänger)   ###");

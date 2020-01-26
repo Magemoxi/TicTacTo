@@ -128,10 +128,17 @@ namespace Teststen
             1 2 3  <->  c1 c2 c3
             */
             Console.WriteLine("aktueller speiler vor auswerung:  " + geradedran);
-            if (((a1 == geradedran) && (a2 == geradedran) && (a3 == geradedran)) ||
+                // Wagerecht
+            if (    ((a1 == geradedran) && (a2 == geradedran) && (a3 == geradedran)) ||
                     ((b1 == geradedran) && (b2 == geradedran) && (b3 == geradedran)) ||
                     ((c1 == geradedran) && (c2 == geradedran) && (c3 == geradedran)) ||
 
+                    // Sekrecht
+                    ((a1 == geradedran) && (b1 == geradedran) && (c1 == geradedran)) ||
+                    ((a2 == geradedran) && (b2 == geradedran) && (c2 == geradedran)) ||
+                    ((a3 == geradedran) && (b3 == geradedran) && (c3 == geradedran)) ||
+
+                    // Diagonal
                     ((a1 == geradedran) && (b2 == geradedran) && (c3 == geradedran)) ||
                     ((a3 == geradedran) && (b2 == geradedran) && (c1 == geradedran))
                )

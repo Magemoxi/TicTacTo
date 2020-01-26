@@ -13,7 +13,7 @@ V.4 ist verbuggt (Testphase).
 
 V.5 ist spielbar :), jedoch noch nicht gegen den Rechner :( 
 
-V.5.1 Habe gemerkt, das ich die Senkrechten Felder garnicht ausgwertet hatte o_O 
+V.5.1 Habe gemerkt, dass ich die Senkrechten Felder garnicht ausgwertet hatte o_O 
 
 To do
   - Besere Menüführung

@@ -13,7 +13,7 @@ V.4 ist verbuggt (Testphase).
 
 V.5 ist spielbar :), jedoch noch nicht gegen den Rechner :( 
 
-
+V.5.1 Habe gemerkt, das ich die Senkrechten Felder garnicht ausgwertet hatte o_O 
 
 To do
   - Besere Menüführung
@@ -25,6 +25,7 @@ Bekannte Bugs in V.5
   - Zurück ins Hauptmenü durch Eingabe 00 geht nicht. Der Integer Input schneidet bei mehr als einer Null die restlichen ab...
   - Durch nur drücken der Enter Taste im Spiel fliegt Ihr ins Hauptmenü. Entweder den gewählten Spielmodus 1 oder 2 auswählen
     um fortzusetzen oder durch drücken der Taste 0, ein Neues Spiel zu starten.
+    
   
 
 

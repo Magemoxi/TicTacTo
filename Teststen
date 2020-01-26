@@ -12,15 +12,16 @@ namespace Teststen
         {
             while (true)
             {
-                Console.WriteLine("\n#######################");
-                Console.WriteLine("###  Hauptmenü        ###");
-                Console.WriteLine("###  1) Tictacto V.1  ###");
-                Console.WriteLine("###  2) Tictacto V.2  ###");
-                Console.WriteLine("###  3) Tictacto V.3  ###");
-                Console.WriteLine("###  4) Tictacto V.4  ###");
-                Console.WriteLine("###  5) Tictacto V.5  ###");
-                Console.WriteLine("###  0) Beenden :-(   ###");
-                Console.WriteLine("########################");
+                Console.WriteLine("\n##########################");
+                Console.WriteLine("###  Hauptmenü         ###");
+                Console.WriteLine("###  1) Tictacto V.1   ###");
+                Console.WriteLine("###  2) Tictacto V.2   ###");
+                Console.WriteLine("###  3) Tictacto V.3   ###");
+                Console.WriteLine("###  4) Tictacto V.4   ###");
+                Console.WriteLine("###  5) Tictacto V.5   ###");
+                Console.WriteLine("###  6) Tictacto V.5_1 ###");
+                Console.WriteLine("###  0) Beenden :-(    ###");
+                Console.WriteLine("##########################");
                 Console.WriteLine("\n Warte auf Eingabe...");
 
                 try
@@ -58,13 +59,19 @@ namespace Teststen
                             TictactoV5 tttv5 = new TictactoV5();
                             tttv5.Hauptmenü();
                             break;
-                        case 0:
+                        case 6:
+                            Console.Clear();
+                            Console.Clear();
+                            TictactoV5_1 tttv5_1 = new TictactoV5_1();
+                            tttv5_1.Hauptmenü();
+                            break;
+                        case 00:
                             Console.Clear();
                             Environment.Exit(0);
                             break;
                         default:
                             Console.Clear();
-                            Console.WriteLine($"Nur Zahlen von 0 bis 4! Deine Eingabe war: {input}");
+                            Console.WriteLine($"Nur Zahlen von 0 bis 5! Deine Eingabe war: {input}");
                             break;
                     }//end switch                 
                 }//end try

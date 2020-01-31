@@ -22,9 +22,12 @@ To do
   
 Bekannte Bugs in V.5_1  
   - Wird der Wertebereich eines Integers überschritten wird diese nicht als Zahl wargenommen und der Catch Block greift.
+  Behoben in Multiklass.
   - Zurück ins Hauptmenü durch Eingabe 00 geht nicht. Der Integer Input schneidet bei mehr als einer Null die restlichen ab...
+Behoben in Multiklass aber noch nicht integirert
   - Durch nur drücken der Enter Taste im Spiel fliegt Ihr ins Hauptmenü. Entweder den gewählten Spielmodus 1 oder 2 auswählen
     um fortzusetzen oder durch drücken der Taste 0, ein Neues Spiel zu starten.
+Behoben in Multiklass.
     
   
 

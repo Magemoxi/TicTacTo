@@ -1,8 +1,4 @@
 # TicTacTo
-Info:
-TicTacTo-Single-Class wird nicht mehr weiterentwickelt, dafür aber Tic-Tac-To-Multiclass. :-P
-
-
 Hallo <.<
 
 

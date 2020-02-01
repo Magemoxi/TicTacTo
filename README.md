@@ -22,6 +22,7 @@ To do
   - Funktionierenden Bot Modus (Leicht und Normal)
   
 Bekannte Bugs in V.5_1  (Hier gelistete Bugs alle in Tic-Tac-To-Multiclass behoben)
+  - Die Hintergund Farbe wird nicht richtig dargestellt. Einmal Enter drücken oder die größe des Konsolenfensters ändern, dannach sollte    die Hintergrundfarbe nur noch einfarbig sein.
   - Wird der Wertebereich eines Integers überschritten wird diese nicht als Zahl wargenommen und der Catch Block greift.
   - Zurück ins Hauptmenü durch Eingabe 00 geht nicht. Der Integer Input schneidet bei mehr als einer Null die restlichen ab...
   - Durch nur drücken der Enter Taste im Spiel fliegt Ihr ins Hauptmenü. Entweder den gewählten Spielmodus 1 oder 2 auswählen

@@ -9,7 +9,11 @@ namespace Teststen
     class Start
     {
         static void Main(string[] args)
-        {
+        {            
+            // Vordergunrd, Hintergundfarbe und Schriftfarbe ändern
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            //  Console.ResetColor();   // Resetet die Farben
             while (true)
             {
                 Console.WriteLine("\n##########################");
